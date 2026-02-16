@@ -34,7 +34,7 @@ export default function RootLayout({
 				<FlowProviderWrapper>
 					<div className="xl:col-start-3 xl:col-end-5 flex flex-col gap-5">
 						<LayoutHeader />
-						<main className="flex flex-col bg-neutral-100 rounded-2xl p-5">
+						<main className="flex flex-col bg-slate-100 rounded-2xl p-5">
 							{children}
 						</main>
 						<LayoutFooter />
