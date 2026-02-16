@@ -32,11 +32,13 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-1 xl:grid-cols-6 min-h-screen p-5`}
 			>
 				<FlowProviderWrapper>
-					<main className="xl:col-start-3 xl:col-end-5 flex flex-col gap-5">
+					<div className="xl:col-start-3 xl:col-end-5 flex flex-col gap-5">
 						<LayoutHeader />
-						<div className="grow flex flex-col">{children}</div>
+						<main className="flex flex-col bg-neutral-100 rounded-2xl p-5">
+							{children}
+						</main>
 						<LayoutFooter />
-					</main>
+					</div>
 				</FlowProviderWrapper>
 			</body>
 		</html>

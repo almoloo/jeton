@@ -6,20 +6,20 @@ import Link from 'next/link';
 
 export default function LayoutHeader() {
 	return (
-		<header className="flex items-center justify-between">
+		<header className="flex items-end justify-between">
 			<Link
 				href="/"
-				className="font-black"
+				className="font-bold"
 			>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-1">
 					<h1 className="text-2xl">Jeton</h1>
 					<SlashIcon
-						className="h-3 w-3"
+						className="h-3 w-3 mt-1"
 						strokeWidth={5}
 					/>
 				</div>
 				<p className="text-neutral-500 text-lg">
-					The gift that keeps on giving.
+					A gift that keeps on giving.
 				</p>
 			</Link>
 			<Connect />

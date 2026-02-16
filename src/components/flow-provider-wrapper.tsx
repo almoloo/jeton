@@ -36,7 +36,7 @@ export function FlowProviderWrapper({ children }: FlowProviderWrapperProps) {
 				walletconnectProjectId: walletConnectProjectId,
 			}}
 			flowJson={flowJSON}
-			colorMode="dark"
+			colorMode="light"
 		>
 			{children}
 		</FlowProvider>
