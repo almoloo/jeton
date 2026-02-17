@@ -1,7 +1,9 @@
 import GiftCard from '@/components/dashboard/gift-card';
+import PageHeading from '@/components/layout/heading';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { CircleSlashIcon, GiftIcon, PlusIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export default function DashboardPage() {
 	const giftCards = [
@@ -22,19 +24,22 @@ export default function DashboardPage() {
 	];
 	return (
 		<div>
-			<div className="flex items-center justify-between mb-5">
-				<h1 className="flex items-center gap-2 text-lg font-bold">
-					<GiftIcon className="h-5 w-5 text-neutral-500" />
-					<span>My Gift Cards</span>
-				</h1>
-				<Button
-					size="sm"
-					className="cursor-pointer"
-				>
-					<PlusIcon className="h-4 w-4" />
-					Create Gift Card
-				</Button>
-			</div>
+			<PageHeading
+				title="My Gift Cards"
+				icon={<GiftIcon className="h-5 w-5 text-neutral-500" />}
+				action={
+					<Button
+						size="sm"
+						className="cursor-pointer"
+						asChild
+					>
+						<Link href="dashboard/create">
+							<PlusIcon className="h-4 w-4" />
+							Create Gift Card
+						</Link>
+					</Button>
+				}
+			/>
 			<div className="flex flex-col gap-2">
 				{giftCards.length === 0 && (
 					<Alert>

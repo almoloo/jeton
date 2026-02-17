@@ -29,10 +29,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-1 xl:grid-cols-6 min-h-screen p-5`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 min-h-screen p-5`}
 			>
 				<FlowProviderWrapper>
-					<div className="xl:col-start-3 xl:col-end-5 flex flex-col gap-5">
+					<div className="xl:col-start-2 xl:col-end-5 2xl:col-start-3 2xl:col-end-5 lg:col-start-2 lg:col-end-4 flex flex-col gap-5">
 						<LayoutHeader />
 						<main className="flex flex-col bg-slate-100 rounded-2xl p-5">
 							{children}
